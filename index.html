@@ -15,17 +15,47 @@
                <img src="https://i.gyazo.com/9d0c7d9896731f861140bf24d993efc7.jpg" alt="Avatar" class="profile-img">
             </div>
             <h1>Daniel Josías Cuéllar Betancourt</h1>
-            <p class="bio">Semestre Enero-Julio Intercambio</p>
+            <p class="bio">Semestre Enero-Julio Intercambio | Woosong University</p>
         </header>
 
-        <div id="link-container">
+        <nav class="tabs">
+            <button onclick="showSection('links')" id="btn-links" class="active">
+                <i class="fas fa-link"></i> Enlaces
+            </button>
+            <button onclick="showSection('converter')" id="btn-converter">
+                <i class="fas fa-coins"></i> Conversor KRW
+            </button>
+        </nav>
+
+        <div id="links-section">
+            <div id="link-container"></div>
+        </div>
+
+        <div id="converter-section" style="display: none;">
+            <div class="converter-card">
+                <h3><i class="fas fa-won-sign"></i> Conversor de Wones</h3>
+                <div class="input-group">
+                    <label for="krw-input">Cantidad en Wones (KRW):</label>
+                    <input type="number" id="krw-input" placeholder="Ej: 10000" oninput="convertCurrency()">
+                </div>
+                
+                <div class="results">
+                    <div class="result-item">
+                        <span class="label">🇺🇸 Dólares (USD):</span>
+                        <span id="usd-result">$0.00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">🇲🇽 Pesos (MXN):</span>
+                        <span id="mxn-result">$0.00</span>
+                    </div>
+                </div>
+                <p class="disclaimer">*Tipo de cambio aprox:  1 USD ≈ 1419 KRW  | 1 MXN ≈ 83.3333 KRW</p>
             </div>
+        </div>
 
         <footer>
-            <div class="social-icons">
-                
-            </div>
-            <p>© 2026 - :v</p>
+            <div class="social-icons"></div>
+            <p>© 2026 - Daniel Cuéllar</p>
         </footer>
     </div>
 
