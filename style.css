@@ -1,0 +1,157 @@
+/* Variables de diseño */
+:root {
+    --primary-color: #ffffff;
+    --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-hover: rgba(255, 255, 255, 0.2);
+}
+
+/* Configuración General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* Cambiado a flex-start para que el scroll funcione bien con muchos links */
+    align-items: flex-start; 
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    /* Ampliado para permitir que las tarjetas se expandan hacia los lados */
+    max-width: 1000px; 
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Header y Perfil */
+header {
+    margin-bottom: 40px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid var(--glass-border);
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 { 
+    font-size: 1.8rem; 
+    margin: 0 0 8px 0; 
+    letter-spacing: 1px; 
+}
+
+.bio { 
+    font-size: 1rem; 
+    opacity: 0.8; 
+    margin: 0; 
+}
+
+/* --- CONTENEDOR DE LINKS (MODO GRID) --- */
+#link-container {
+    margin-top: 20px;
+    display: grid;
+    /* Crea columnas automáticas de mínimo 220px */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px; /* Espacio horizontal y vertical entre tarjetas */
+}
+
+/* Tarjeta de Link con Previsualización */
+.link-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease;
+    height: 100%; /* Para que todas las tarjetas en la misma fila midan lo mismo */
+}
+
+.link-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: var(--glass-hover);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Contenedor de la imagen de preview */
+.preview-img-container {
+    width: 100%;
+    height: 130px; /* Un poco más pequeña para que quepan más filas */
+    background: rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.link-preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.link-card:hover .link-preview-img {
+    transform: scale(1.15);
+}
+
+/* Texto e iconos debajo de la imagen */
+.link-content {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    flex-grow: 1; /* Empuja el contenido para llenar la tarjeta */
+}
+
+.link-content i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Footer y Redes Sociales */
+footer {
+    margin-top: 60px;
+    padding-bottom: 40px;
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.6rem;
+}
+
+.social-icons a { 
+    color: white; 
+    transition: 0.3s; 
+    text-decoration: none;
+}
+
+.social-icons a:hover { 
+    opacity: 1; 
+    transform: scale(1.2); 
+}
