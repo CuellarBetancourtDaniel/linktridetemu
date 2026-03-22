@@ -6,7 +6,9 @@ const myLinks = [
     { name: "ORIENTATION SLIDES", url: "https://drive.google.com/file/d/1yXHQeClte0Hf0aAtrukEIUZqrNk8fBZE/view", icon: "fas fa-file-powerpoint" },
     { name: "HOW TO PASS ATTENDANCE", url: "https://drive.google.com/file/d/1nsCjs2gOCOtQFo5U3vxLV9l87mULxViy/view", icon: "fas fa-check-circle" },
     { name: "WOOSONG'S MAP", url: "https://i.gyazo.com/3b328d0638c2750d74c0571ab677c9da.png", icon: "fas fa-map-marked-alt" },
-    { name: "WOOSONG'S CALENDAR", url: "https://english.wsu.ac.kr/page/index.jsp?code=eng0206", icon: "fas fa-calendar-alt" }
+    { name: "WOOSONG'S CALENDAR", url: "https://english.wsu.ac.kr/page/index.jsp?code=eng0206", icon: "fas fa-calendar-alt" },
+    { name: "WOOSONG'S PAPERWORK FOR ARC AND BANC ACOUNT", url: "https://drive.google.com/drive/folders/1JsoHJQ_8TGhHKP35_vzE3mCp29yH07HD", icon: "fab fa-google-drive" },
+    { name: "WOOSONG'S ORIENTATION DOCS", url: "https://drive.google.com/drive/folders/1LpB_QMi4RgggQ42yQF8e0EbkxaLT3Ig1", icon: "fab fa-google-drive" }
 ];
 
 // --- Generar Links ---
